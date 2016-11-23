@@ -2,5 +2,5 @@ package com.lockerfish;
 
 public class CoinFlip {
 
-	int x = 100;
+	int x = 10000;
 }
