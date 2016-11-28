@@ -16,6 +16,8 @@ public class CoinFlip {
 		setRandomFlip(coinFlips);
 		
 		System.out.println(Arrays.toString(coinFlips));
+		System.out.println("1. index " + Arrays.asList(coinFlips).indexOf("Head")); 
+		//Only prints first index, may need to add ++ to method to keep searching and print other indexes
 	}
 
 }
