@@ -1,0 +1,65 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class CoinFlip extends JFrame {
+			
+	public static void main(String[] args) throws MalformedURLException{
+		
+
+        URL url = new URL("file:///Users/alexisflores/Documents/workspace/CoinFlipJFrame/img/coin_flip_cont.gif");
+        Icon icon = new ImageIcon(url);
+        JLabel label = new JLabel(icon);
+        
+		JFrame window = new JFrame("Coin-Flip");
+		window.getContentPane().add(label);
+        window.pack();
+		window.setSize(600, 600);
+		window.setResizable(false);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setLocationRelativeTo(null);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		window.add(panel);
+		
+		JTextField jt = new JTextField();
+		String [] test = new String [] {"LOL"};
+		int i;
+		for (i = 0; i < test.length-1; i++){
+		}
+		jt.setBounds(50, 20, 500, 50);
+		jt.setText(test[i]);
+		
+    	JTextField jt2 = new JTextField();
+		String [] test2 = new String [] {"LOL"};
+		for (i = 0; i < test2.length-1; i++){
+		}
+		jt2.setBounds(50, 70, 250, 50);
+		jt2.setText(test2[i]);
+		
+		JTextField jt3 = new JTextField();
+		String [] test3 = new String [] {"LOL"};
+		for (i = 0; i < test3.length-1; i++){
+		}
+		jt3.setBounds(300, 70, 250, 50);
+		jt3.setText(test3[i]);
+		
+		JButton button = new JButton("Flip");
+		button.setBounds(235, 450, 130, 45);
+		panel.add(button);
+		panel.add(jt);
+		panel.add(jt2);
+		panel.add(jt3);
+		
+		
+		window.setVisible(true);
+	}
+}
