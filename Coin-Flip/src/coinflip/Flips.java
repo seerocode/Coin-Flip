@@ -1,14 +1,18 @@
 package coinflip;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Flips {
+
+	// variables are public so they can be referenced in other classes
 	static int hcount = 0;
 	static int tcount = 0;
-	static String[] HandT = flipcoin();
+	// String array variable to hold the return from the flipCoin method
+	static String[] hAndT = flipCoin();
 
-	public static String[] flipcoin() {
+	public static String[] flipCoin() {
 		String[] coins = new String[10];
 		Random rand = new Random();
 		for (int i = 0; i < coins.length; i++) {
@@ -29,13 +33,14 @@ public class Flips {
 		System.out.println("Heads");
 		System.out.println("=====");
 
-		for (int i = 0; i < HandT.length; i++) {
-			if (HandT[i].equals("Head")) {
+		for (int i = 0; i < hAndT.length; i++) {
+			if (hAndT[i].equals("Head")) {
 				System.out.println("index " + Integer.toString(i));
 				hcount++;
 			}
 		}
 
+		System.out.println("Total Heads: " + Integer.toString(hcount));
 	}
 
 	public static void tailsCount() {
@@ -44,23 +49,22 @@ public class Flips {
 		System.out.println("Tails");
 		System.out.println("=====");
 
-		for (int i = 0; i < HandT.length; i++) {
-			if (HandT[i].equals("Tail")) {
+		for (int i = 0; i < hAndT.length; i++) {
+			if (hAndT[i].equals("Tail")) {
 				System.out.println("index " + Integer.toString(i));
 				tcount++;
 			}
 		}
 
+		System.out.println("Total Tails: " + Integer.toString(tcount));
 	}
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(HandT));
+		// prints the random array of coin flips to the console
+		System.out.println(Arrays.toString(hAndT));
 
 		tailsCount();
-		System.out.println("Total Tails: " + Integer.toString(tcount));
-
 		headsCount();
-		System.out.println("Total Heads: " + Integer.toString(hcount));
 
 	}
 }

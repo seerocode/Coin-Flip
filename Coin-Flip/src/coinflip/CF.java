@@ -50,7 +50,7 @@ public class CF extends JFrame implements ActionListener {
 
 				Flips flip = new Flips();
 
-				flipsLabel.setText(Arrays.toString(flip.HandT));
+				flipsLabel.setText(Arrays.toString(flip.hAndT));
 				
 				flip.tailsCount();
 				tailsLabel.setText("Total Tails " + Integer.toString(flip.tcount));
