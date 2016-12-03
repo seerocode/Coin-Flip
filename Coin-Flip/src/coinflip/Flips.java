@@ -25,35 +25,42 @@ public class Flips {
 
 	public static void headsCount() {
 
-		System.out.println("Head");
+		System.out.println();
+		System.out.println("Heads");
+		System.out.println("=====");
+
 		for (int i = 0; i < HandT.length; i++) {
 			if (HandT[i].equals("Head")) {
 				System.out.println("index " + Integer.toString(i));
 				hcount++;
 			}
 		}
-		
+
 	}
 
 	public static void tailsCount() {
-		System.out.println("Tail");
+
+		System.out.println();
+		System.out.println("Tails");
+		System.out.println("=====");
+
 		for (int i = 0; i < HandT.length; i++) {
 			if (HandT[i].equals("Tail")) {
 				System.out.println("index " + Integer.toString(i));
 				tcount++;
 			}
 		}
-		
+
 	}
 
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(HandT));
-		
+
 		tailsCount();
-		System.out.println("Total Tails " + Integer.toString(tcount));
-		
+		System.out.println("Total Tails: " + Integer.toString(tcount));
+
 		headsCount();
-		System.out.println("Total Heads " + Integer.toString(hcount));
+		System.out.println("Total Heads: " + Integer.toString(hcount));
 
 	}
 }
