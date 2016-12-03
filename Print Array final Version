@@ -1,0 +1,58 @@
+package lecutre;
+
+	import java.util.Arrays;
+
+	import java.util.Random;
+
+	public class PrintArray {
+		static int hcount=0;
+		static  int tcount=0;
+		static String[] HandT = flipcoin() ;
+			
+		 public static String[] flipcoin(){
+			   String[] a = new String[10];
+			   Random rand = new Random();
+			   for(int i=0; i<10; i++){
+				   int  n = rand.nextInt(2) + 1;
+				   if(n==1){
+				   a[i]="Tail";
+				   }else{
+					   a[i]="Head";
+				   }
+			   }
+			   return a;
+			   // to general itself automatic when you run it.
+		 }
+		
+			 public static void headsCount(){ 
+				 
+			   System.out.println("Head");		
+			   for (int i = 0; i < HandT.length;i++){ 
+				   if(HandT[i].equals("Head")){
+					   System.out.println("index "+ Integer.toString(i));
+					 hcount++;
+				   }
+			   }
+			   System.out.println("Total Heads "+ Integer.toString(hcount));
+		   }
+			   public static void tailsCount(){
+			   System.out.println("Tail");
+			   for (int i = 0; i < HandT.length;i++){ 
+				   if(HandT[i].equals("Tail")){
+					   System.out.println("index "+ Integer.toString(i));
+					 tcount++;
+				   }
+			   }
+			   System.out.println("Total Tails "+ Integer.toString(tcount));
+
+
+	  }
+			   public static void main(String[] args){
+				   System.out.println(Arrays.toString(HandT));
+				   tailsCount();
+				   headsCount();
+				   
+			   }
+	}
+
+
