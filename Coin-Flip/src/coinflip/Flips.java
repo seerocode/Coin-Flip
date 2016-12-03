@@ -7,8 +7,8 @@ import java.util.Random;
 public class Flips {
 
 	// variables are public so they can be referenced in other classes
-	static int hcount = 0;
-	static int tcount = 0;
+	static int hCount = 0;
+	static int tCount = 0;
 	// String array variable to hold the return from the flipCoin method
 	static String[] hAndT = flipCoin();
 
@@ -24,7 +24,6 @@ public class Flips {
 			}
 		}
 		return coins;
-		// to general itself automatic when you run it.
 	}
 
 	public static void headsCount() {
@@ -36,11 +35,12 @@ public class Flips {
 		for (int i = 0; i < hAndT.length; i++) {
 			if (hAndT[i].equals("Head")) {
 				System.out.println("index " + Integer.toString(i));
-				hcount++;
+				hCount++;
 			}
+			
 		}
 
-		System.out.println("Total Heads: " + Integer.toString(hcount));
+		System.out.println("Total Heads: " + Integer.toString(hCount));
 	}
 
 	public static void tailsCount() {
@@ -52,11 +52,11 @@ public class Flips {
 		for (int i = 0; i < hAndT.length; i++) {
 			if (hAndT[i].equals("Tail")) {
 				System.out.println("index " + Integer.toString(i));
-				tcount++;
+				tCount++;
 			}
 		}
 
-		System.out.println("Total Tails: " + Integer.toString(tcount));
+		System.out.println("Total Tails: " + Integer.toString(tCount));
 	}
 
 	public static void main(String[] args) {

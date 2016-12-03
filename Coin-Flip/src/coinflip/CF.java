@@ -43,6 +43,7 @@ public class CF extends JFrame implements ActionListener {
 		headsLabel.setBounds(300, 70, 250, 50);
 
 		JButton button = new JButton("Flip");
+		button.setBounds(235, 450, 130, 45);
 		button.addActionListener(new ActionListener() {
 
 			@Override
@@ -53,17 +54,30 @@ public class CF extends JFrame implements ActionListener {
 				flipsLabel.setText(Arrays.toString(flip.hAndT));
 				
 				flip.tailsCount();
-				tailsLabel.setText("Total Tails " + Integer.toString(flip.tcount));
+				tailsLabel.setText("Total Tails " + Integer.toString(flip.tCount));
 
 				flip.headsCount();
-				headsLabel.setText("Total Tails " + Integer.toString(flip.hcount));
+				headsLabel.setText("Total Tails " + Integer.toString(flip.hCount));
 
 			}
 
 		});
 		
-		button.setBounds(235, 450, 130, 45);
+//		JButton clearButton = new JButton ("Clear");
+//		clearButton.setBounds(330, 450, 130, 45);
+//		clearButton.addActionListener(new ActionListener() {
+//
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				window.getContentPane().validate();
+//				window.getContentPane().repaint();
+//				
+//			}
+//			
+//		});
+		
 		panel.add(button);
+//		panel.add(clearButton);
 		panel.add(flipsLabel);
 		panel.add(tailsLabel);
 		panel.add(headsLabel);
