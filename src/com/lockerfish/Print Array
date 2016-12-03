@@ -1,0 +1,63 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+
+	public class PrintArray {
+		 
+		 private static int hcount ;
+		 private  static  int tcount ;
+		private static String[] HandT ;
+		   public static String[] flipcoin(){
+		   String[] a = new String[10];
+		   Random rand = new Random();
+		   for(int i=0; i<10; i++){
+			   int  n = rand.nextInt(2) + 1;
+			   if(n==1){
+			   a[i]="Tail";
+			   }else{
+				   a[i]="Head";
+			   }
+		   }
+		   return a;
+		   // to general itself automatic when you run it.
+	   }
+		    public static void tailsCount() {
+		    	   HandT =  flipcoin();
+		           tcount = 0;
+				   System.out.println("Tail");
+				   for (int i = 0; i < HandT.length;i++){ 
+					   if(HandT[i].equals("Tail")){
+						   System.out.println("index "+ Integer.toString(i));
+						 tcount++;
+						   }
+					   }
+		            System.out.println("Total Tails "+ Integer.toString(tcount));
+			  
+		    }
+		   public static void headsCount(){
+			   hcount = 0;
+			   HandT =  flipcoin();
+			 
+			   System.out.println("Head");		
+			   for (int i = 0; i < HandT.length;i++){ 
+				   if(HandT[i].equals("Head")){
+					   System.out.println("index "+ Integer.toString(i));
+					 hcount++;
+				   }
+			   }
+             System.out.println("Total Heads "+ Integer.toString(hcount));
+		   }
+          
+	 
+	 public static void main(String[] args){
+		 tailsCount();
+		 headsCount();
+	 
+	 }
+		   
+	   }
+	
+	
+
+	
+  
