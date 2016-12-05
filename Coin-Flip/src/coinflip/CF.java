@@ -15,36 +15,48 @@ import javax.swing.JPanel;
 
 public class CF extends JFrame implements ActionListener {
 	
+	JFrame window;
+	JPanel panel;
+	
+	URL imageURL;
+	Icon icon;
+	JLabel iconLabel;
+	
+	JLabel flipsLabel;
+	JLabel tailsLabel;
+	JLabel headsLabel;
+	JButton clickButton;
+	
 	public CF() throws MalformedURLException {
 		
-		URL url = new URL("file:///Users/alexisflores/Documents/workspace/CoinFlipJFrame/img/coin_flip_cont.gif");
-		Icon icon = new ImageIcon(url);
-		JLabel label = new JLabel(icon);
+		imageURL = new URL("file:///Users/alexisflores/Documents/workspace/CoinFlipJFrame/img/coin_flip_cont.gif");
+		icon = new ImageIcon(imageURL);
+		iconLabel = new JLabel(icon);
 
-		JFrame window = new JFrame("Coin-Flip");
-		window.getContentPane().add(label);
+		window = new JFrame("Coin-Flip");
+		window.getContentPane().add(iconLabel);
 		window.pack();
 		window.setSize(600, 600);
 		window.setResizable(false);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setLocationRelativeTo(null);
 
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel.setLayout(null);
 		window.add(panel);
 
-		JLabel flipsLabel = new JLabel("[ FLIPS = ]");
+		flipsLabel = new JLabel("[ FLIPS = ]");
 		flipsLabel.setBounds(50, 20, 500, 50);
 
-		JLabel tailsLabel = new JLabel("[ TAILS = ]");
+		tailsLabel = new JLabel("[ TAILS = ]");
 		tailsLabel.setBounds(50, 70, 250, 50);
 
-		JLabel headsLabel = new JLabel("[ HEADS = ]");
+		headsLabel = new JLabel("[ HEADS = ]");
 		headsLabel.setBounds(300, 70, 250, 50);
 
-		JButton button = new JButton("Flip");
-		button.setBounds(235, 450, 130, 45);
-		button.addActionListener(new ActionListener() {
+		clickButton = new JButton("Flip");
+		clickButton.setBounds(235, 450, 130, 45);
+		clickButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -63,7 +75,7 @@ public class CF extends JFrame implements ActionListener {
 
 		});
 		
-		panel.add(button);
+		panel.add(clickButton);
 		panel.add(flipsLabel);
 		panel.add(tailsLabel);
 		panel.add(headsLabel);
