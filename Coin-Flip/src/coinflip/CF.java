@@ -29,7 +29,7 @@ public class CF extends JFrame implements ActionListener {
 	
 	public CF() throws MalformedURLException {
 		
-		imageURL = new URL("file:///Users/alexisflores/Documents/workspace/CoinFlipJFrame/img/coin_flip_cont.gif");
+		imageURL = new URL("file:///Users/Student/Documents/coin_flip_cont.gif");
 		icon = new ImageIcon(imageURL);
 		iconLabel = new JLabel(icon);
 

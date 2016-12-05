@@ -6,12 +6,12 @@ import java.util.Random;
 public class Flips {
 
 	// variables are public so they can be referenced in other classes
-	static int hCount = 0;
-	static int tCount = 0;
+	int hCount = 0;
+	 int tCount = 0;
 	// String array variable to hold the return from the flipCoin method
-	static String[] hAndT = flipCoin();
+	 String[] hAndT = flipCoin();
 
-	public static String[] flipCoin() {
+	public String[] flipCoin() {
 		String[] coins = new String[10];
 		Random rand = new Random();
 		for (int i = 0; i < coins.length; i++) {
@@ -25,7 +25,7 @@ public class Flips {
 		return coins;
 	}
 
-	public static void headsCount() {
+	public void headsCount() {
 
 		System.out.println();
 		System.out.println("Heads");
@@ -42,7 +42,7 @@ public class Flips {
 		System.out.println("Total Heads: " + hCount);
 	}
 
-	public static void tailsCount() {
+	public void tailsCount() {
 
 		System.out.println();
 		System.out.println("Tails");
@@ -59,11 +59,11 @@ public class Flips {
 	}
 
 	public static void main(String[] args) {
-		// prints the random array of coin flips to the console
-		System.out.println(Arrays.toString(hAndT));
-
-		tailsCount();
-		headsCount();
+//		// prints the random array of coin flips to the console
+//		System.out.println(Arrays.toString(hAndT));
+//
+//		tailsCount();
+//		headsCount();
 
 	}
 }
