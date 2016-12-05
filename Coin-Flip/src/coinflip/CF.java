@@ -15,6 +15,8 @@ import javax.swing.JPanel;
 
 public class CF extends JFrame implements ActionListener {
 	
+	JButton clearButton;
+	
 	public CF() throws MalformedURLException {
 		
 		URL url = new URL("file:///Users/alexisflores/Documents/workspace/CoinFlipJFrame/img/coin_flip_cont.gif");
@@ -41,6 +43,24 @@ public class CF extends JFrame implements ActionListener {
 
 		JLabel headsLabel = new JLabel("[ HEADS = ]");
 		headsLabel.setBounds(300, 70, 250, 50);
+		
+		clearButton = new JButton("Clear");
+		clearButton.setBounds(305, 500, 130, 45);
+		clearButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				window.dispose();
+				try {
+					new CF();
+				} catch (MalformedURLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+			}
+			
+		});
 
 		JButton button = new JButton("Flip");
 		button.setBounds(235, 450, 130, 45);
