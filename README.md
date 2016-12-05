@@ -1,2 +1,2 @@
 # Coin-Flip
-Group project for CMP 167 - Java Programming
+Group project for CMP 167 - Java Programming I
