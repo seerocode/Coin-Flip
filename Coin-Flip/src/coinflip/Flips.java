@@ -33,13 +33,13 @@ public class Flips {
 
 		for (int i = 0; i < hAndT.length; i++) {
 			if (hAndT[i].equals("Head")) {
-				System.out.println("index " + Integer.toString(i));
+				System.out.println("index " + i);
 				hCount++;
 			}
 			
 		}
 
-		System.out.println("Total Heads: " + Integer.toString(hCount));
+		System.out.println("Total Heads: " + hCount);
 	}
 
 	public static void tailsCount() {
@@ -50,12 +50,12 @@ public class Flips {
 
 		for (int i = 0; i < hAndT.length; i++) {
 			if (hAndT[i].equals("Tail")) {
-				System.out.println("index " + Integer.toString(i));
+				System.out.println("index " + i);
 				tCount++;
 			}
 		}
 
-		System.out.println("Total Tails: " + Integer.toString(tCount));
+		System.out.println("Total Tails: " + tCount);
 	}
 
 	public static void main(String[] args) {
