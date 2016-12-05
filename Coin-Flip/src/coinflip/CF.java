@@ -63,21 +63,7 @@ public class CF extends JFrame implements ActionListener {
 
 		});
 		
-//		JButton clearButton = new JButton ("Clear");
-//		clearButton.setBounds(330, 450, 130, 45);
-//		clearButton.addActionListener(new ActionListener() {
-//
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				window.getContentPane().validate();
-//				window.getContentPane().repaint();
-//				
-//			}
-//			
-//		});
-		
 		panel.add(button);
-//		panel.add(clearButton);
 		panel.add(flipsLabel);
 		panel.add(tailsLabel);
 		panel.add(headsLabel);
