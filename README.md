@@ -11,7 +11,7 @@ In the end, it did sort of work out that way for us as we all slowly moved into 
 
 ## The Methods
 
-In our ```Flips class```, we have three public fields (public so the CF class for the JFrame can access those variables):
+In our ```Flips``` class, we have three public fields (public so the CF class for the JFrame can access those variables):
 - ```int hCount``` //stores the total index count for heads
 - ```int tCount``` //stores the total index count for tails
 - ```String[] hAndT``` //stores the resulting random array from the return array method flipCoin
