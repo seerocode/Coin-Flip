@@ -1,5 +1,5 @@
 # Coin-Flip
-Group project for CMP 167 - Java Programming I
+(Group project for CMP 167 - Java Programming I)
 
 The goal of this project was to generate a random array of coin flips (heads or tails) whenever we clicked a button in a Java GUI. 
 
